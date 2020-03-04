@@ -1,0 +1,19 @@
+import random
+
+def answer():
+    f = open('8bans.txt')
+    an = f.read().splitlines()
+    st = input('ask me any yes or no question ')
+    print('Hmmm...\n'
+          'thinking..')
+    print(random.choice(an))
+    repeat()
+def repeat():
+    rep = input('do you want to try again? y|n: ')
+    if rep == 'y' or rep == 'Y':
+        answer()
+    else:
+        print('well...come back again')
+        exit()
+print('welcome to 8ball')
+answer()
